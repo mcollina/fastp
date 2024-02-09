@@ -1,0 +1,39 @@
+{
+  "name": "fastp",
+  "version": "0.0.1",
+  "description": "Fast promise utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard | snazzy && borp --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcollina/fastp.git"
+  },
+  "keywords": [
+    "promise",
+    "promises",
+    "fast",
+    "map",
+    "limit",
+    "stream",
+    "transform"
+  ],
+  "author": "Matteo Collina <hello@matteocollina.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcollina/fastp/issues"
+  },
+  "homepage": "https://github.com/mcollina/fastp#readme",
+  "dependencies": {
+    "fastq": "^1.17.1"
+  },
+  "devDependencies": {
+    "@matteo.collina/tspl": "^0.1.1",
+    "borp": "^0.9.1",
+    "p-limit": "^5.0.0",
+    "p-map": "^7.0.1",
+    "snazzy": "^9.0.0",
+    "standard": "^17.1.0"
+  }
+}
