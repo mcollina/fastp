@@ -1,11 +1,11 @@
 # fastp
 
-Fast promise utilities
+Fast promise utilities.
 
 ## Install
 
 ```js
-npm i fastp
+npm i @matteo.collina/p
 ```
 
 ## API
@@ -16,7 +16,7 @@ Limit the number of promises resolved concurrently.
 Offers the same API of [p-limit](http://npm.im/p-limit)
 
 ```js
-import p from 'fastp'
+import p from '@matteo.collina/p'
 import { settimeout as sleep } from 'node:timers/promises'
 const limit = p.limit(2);
 

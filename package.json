@@ -1,5 +1,5 @@
 {
-  "name": "fastp",
+  "name": "@matteo.collina/p",
   "version": "0.1.0",
   "description": "Fast promise utilities",
   "main": "index.js",
