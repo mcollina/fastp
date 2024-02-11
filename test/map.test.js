@@ -56,4 +56,32 @@ describe('map', () => {
     })
     assert.deepStrictEqual(actual, expected)
   })
+
+  test('should support async iterators', { skip: true }, async () => {
+    const input = (async function * () {
+      for (let i = 1; i <= 5; i++) {
+        yield i
+      }
+    })()
+    const expected = [1, 4, 9, 16, 25]
+    const actual = await p.map(input, async (i) => {
+      await sleep(1)
+      return i * i
+    })
+    assert.deepStrictEqual(actual, expected)
+  })
+
+  test('should map the input as an iterator', async () => {
+    const input = (function * () {
+      for (let i = 1; i <= 5; i++) {
+        yield i
+      }
+    })()
+    const expected = [1, 4, 9, 16, 25]
+    const actual = await p.map(input, async (i) => {
+      await sleep(1)
+      return i * i
+    })
+    assert.deepStrictEqual(actual, expected)
+  })
 })
