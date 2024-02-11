@@ -57,7 +57,7 @@ describe('map', () => {
     assert.deepStrictEqual(actual, expected)
   })
 
-  test('should support async iterators', { skip: true }, async () => {
+  test('should support async iterators', async () => {
     const input = (async function * () {
       for (let i = 1; i <= 5; i++) {
         yield i

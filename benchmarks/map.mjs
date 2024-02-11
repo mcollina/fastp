@@ -5,7 +5,7 @@ import { setImmediate as immediate } from 'timers/promises'
 
 const array = []
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
   array.push(i)
 }
 
