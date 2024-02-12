@@ -37,7 +37,7 @@ console.log(result2)
 // 'bar'
 ```
 
-It's over 3x faster than `p-limit`  
+It's over 3x faster than [`p-limit`](http://npm.im/p-limit):
 
 ```
 ╔══════════════╤═════════╤═════════════════╤═══════════╗
@@ -48,6 +48,25 @@ It's over 3x faster than `p-limit`
 ║ Fastest test │ Samples │          Result │ Tolerance ║
 ╟──────────────┼─────────┼─────────────────┼───────────╢
 ║ fastp.limit  │   10000 │ 91958.28 op/sec │  ± 5.76 % ║
+╚══════════════╧═════════╧═════════════════╧═══════════╝
+```
+
+### `map(input, mapper, options)` 
+
+Maps the `input` using a `mapper`, that must return a `Promise`.
+Valid option is `concurrency`, which is to 1 by default.
+
+It's slightly faster than [`p-map`](http://npm.im/p-map)
+
+```
+╔══════════════╤═════════╤═════════════════╤═══════════╗
+║ Slower tests │ Samples │          Result │ Tolerance ║
+╟──────────────┼─────────┼─────────────────┼───────────╢
+║ pMap         │   10000 │ 68844.29 op/sec │  ± 0.88 % ║
+╟──────────────┼─────────┼─────────────────┼───────────╢
+║ Fastest test │ Samples │          Result │ Tolerance ║
+╟──────────────┼─────────┼─────────────────┼───────────╢
+║ p.map        │   10000 │ 72150.64 op/sec │  ± 0.75 % ║
 ╚══════════════╧═════════╧═════════════════╧═══════════╝
 ```
 
