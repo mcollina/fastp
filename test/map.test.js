@@ -84,4 +84,14 @@ describe('map', () => {
     })
     assert.deepStrictEqual(actual, expected)
   })
+
+  test('concurrency must be at least 1', async () => {
+    const input = [1, 2, 3, 4, 5]
+    await assert.rejects(async () => {
+      await p.map(input, async (i) => {
+        await sleep(1)
+        return i * i
+      }, { concurrency: 0 })
+    }, new Error('concurrency must be at least 1'))
+  })
 })
