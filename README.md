@@ -5,7 +5,7 @@ Fast promise utilities
 ## Install
 
 ```js
-npm i fastp
+npm i @matteo.collina/p
 ```
 
 ## API
