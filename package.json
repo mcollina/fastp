@@ -1,6 +1,6 @@
 {
-  "name": "fastp",
-  "version": "0.1.0",
+  "name": "@matteo.collina/p",
+  "version": "0.1.1",
   "description": "Fast promise utilities",
   "main": "index.js",
   "scripts": {
