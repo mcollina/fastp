@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@matteo.collina/tspl": "^0.2.0",
-    "borp": "^0.20.0",
+    "borp": "^1.0.0",
     "cronometro": "^6.0.2",
     "p-limit": "^7.1.0",
     "p-map": "^7.0.1",
